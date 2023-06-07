@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RevoU Profile</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="navbar-left">
+			<a class="navbar-brand" href="#">
+			<img src="img/revoU-logo.svg" alt="Logo" class="navbar-icon">
+			</a>
+		</div>
+		<div class="navbar-right">
+			<button class="navbar-button">Home</button>
+			<button class="navbar-button">Our Profile</button>
+			<button class="navbar-button">Portfolio</button>
+			<button class="navbar-button">Message Us</button>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="hero">
+		<h1>Hi, <span id="nama"></span>. Welcome to Website!</h1>
+		<p>Ini adalah website latihan pertama</p>
+	</div>
+
+	<!-- Image Slide -->
+	<div class="img-container">
+		<img src="https://source.unsplash.com/random/1080x400?landscape&sig=1" class="img-slideshow">
+		<img src="https://source.unsplash.com/random/1080x400?landscape&sig=2" class="img-slideshow">
+		<img src="https://source.unsplash.com/random/1080x400?landscape&sig=3" class="img-slideshow">
+		<div class="button-container">
+			<button onclick="plusDivs(-1)" class="img-button">Previous</button>
+			<button onclick="plusDivs(1)" class="img-button">Next</button>
+		</div>
+
+	</div>
+
+	<!-- Headquarters -->
+	<h1>Headquarters</h1>
+	<div class="headquarters-section">
+		<div class="headquarters-image-container">
+			<img class="headquarters-image" src="img/jakarta.jpeg" alt="Jakarta">
+			<p>Jakarta</p>
+		</div>
+		<div class="headquarters-image-container">
+			<img class="headquarters-image" src="img/bandung.jpeg" alt="Bandung">
+			<p>Bandung</p>
+		</div>
+		<div class="headquarters-image-container">
+			<img class="headquarters-image" src="img/surabaya.jpeg" alt="Surabaya">
+			<p>Surabaya</p>
+		</div>
+	</div>
+
+
+	<!-- Message Us -->
+	<h1>Message Us</h1>
+	<div class="form-section">
+		<form class="form-input" name="message-form" onsubmit="return validateForm()">
+			<div class="form-row">
+				<label for="full-name">Nama:</label>
+				<input placeholder="Nama" type="text" name="full-name" required>
+			</div>
+			<div class="form-row">
+				<label for="birth-date">Tanggal Lahir:</label>
+				<input type="date" name="birth-date" required>
+			</div>
+			<div class="form-row">
+				<label>Jenis Kelamin:</label>
+				<div class="radio-group">
+					<input type="radio" name="gender" id="male" value="Laki-Laki" required>
+					<label for="male">Laki-Laki</label>
+					<input type="radio" name="gender" id="female" value="Perempuan" required>
+					<label for="female">Perempuan</label>
+				</div>
+			</div>
+			<div class="form-row">
+				<label for="message">Pesan:</label>
+				<textarea name="message" placeholder="Pesan" required></textarea>
+			</div>
+			<button type="submit" class="submit-button">Submit</button>
+		</form>
+		<div class="form-output">
+			<p>Current Time: <span id="current"></span></p>
+			<p>Nama: <span class="output-value" id="output-full-name"></span></p>
+			<p>Tanggal Lahir: <span class="output-value" id="output-birth-date"></span></p>
+			<p>Jenis Kelamin: <span class="output-value" id="output-gender"></span></p>
+			<p>Pesan: <span class="output-value" id="output-message"></span></p>
+		</div>
+	</div>
+	<footer>Created by Barra</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
